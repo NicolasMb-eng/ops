@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build back') {
             steps {
                 sh 'ls -ltr'
                 sh 'mvn clean package'
@@ -42,6 +42,13 @@ pipeline {
         sh 'mvn jacoco:report'
     }
 }
+
+ stage ('NEXUS DEPLOY') {
+
+       steps {
+       sh 'mvn deploy -DskipTests'
+             }
+            }
 
 
 
