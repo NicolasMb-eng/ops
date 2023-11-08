@@ -19,17 +19,7 @@ pipeline {
             }
         }
 
-        stage('SonarQube') {
-            steps {
-             
-            }
-        }
-
-                stage('Mockito Tests') {
-            steps {
-                   
-                }
-        }
+    
 
    stage('Unit Tests') {
             steps {
@@ -40,21 +30,6 @@ pipeline {
            }
 
 
-        stage ('NEXUS DEPLOY') {
-
-       steps {
-       
-            }
-        stage('Build docker image'){
-            steps{
-                
-            }
-        }
-        stage('Push image to Hub'){
-            steps{
-               
-            }
-        }
+      
     }
-}
 }
