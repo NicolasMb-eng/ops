@@ -1,6 +1,7 @@
 package tn.esprit.devops_project.controllers; 
 
 import tn.esprit.devops_project.services.Iservices.IProductService;
+import tn.esprit.devops_project.entities.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
