@@ -29,6 +29,14 @@ pipeline {
                 }
            }
 
+       stage('Mockito Tests') {
+            steps {
+                    // Assurez-vous que vous êtes dans le répertoire du projet Maven
+                    // Exécutez les tests Mockito avec Maven (assurez-vous d'avoir configuré les tests Mockito correctement)
+                    sh 'mvn clean test -Pmockito-tests'
+                }
+       }
+
 
       
     }
