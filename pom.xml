@@ -60,7 +60,7 @@
 			<scope>test</scope>
 		</dependency>
 
-        <dependencies>
+       
     <!-- Autres dépendances -->
     <dependency>
         <groupId>org.mockito</groupId>
@@ -68,7 +68,7 @@
         <version>3.11.2</version> <!-- Remplacez par la version Mockito souhaitée -->
         <scope>test</scope> <!-- Assurez-vous que Mockito est utilisé uniquement pour les tests -->
     </dependency>
-</dependencies>
+
 
 
 
