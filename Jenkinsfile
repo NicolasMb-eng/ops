@@ -49,9 +49,18 @@ pipeline {
        sh 'mvn deploy -DskipTests'
              }
             }
-
-
-
+        stage('SonarQube') {
+            steps {
+                script {
+                    try {
+                        sh 'mvn sonar:sonar'
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILURE'
+                        error "Error running SonarQube analysis: ${e.message}"
+                    }
+                }
+            }
+        }
       
     }
 }
